@@ -1,0 +1,40 @@
+import telebot
+    
+    
+bot = telebot.TeleBot("7513556983:AAGkJ-1NTUeyQiC4S1r-mJbenJmp8QpGAp8")
+    
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+    bot.reply_to(message, "Привет! Я твой Telegram бот.Напиши любой материал и я скажу время его разложения")
+    
+@bot.message_handler(commands=['plastic'])
+def send_hello(message):
+    bot.reply_to(message, "Пластиковая бутылка разлагается в природе от 450 до 1000 лет.")
+    
+@bot.message_handler(commands=['glass'])
+def send_bye(message):
+    bot.reply_to(message, "Стеклянная бутылка разлагается в природе очень долго — от 1 до 2 миллионов лет")
+
+@bot.message_handler(commands=['paper'])
+def send_bye(message):
+    bot.reply_to(message, "Сроки разложения бумаги зависят от её вида:Газетная бумага — от 1 до 4 месяцев. Картонные коробки (картон) — от 3 до 6 месяцев. Офисная бумага — примерно 2 года. Журнальная бумага — до нескольких лет")
+
+@bot.message_handler(commands=['bablegum'])
+def send_bye(message):
+    bot.reply_to(message, 'Жевательная резинка (жвачка) разлагается от 15 до 30 лет')
+
+@bot.message_handler(commands=['iron'])
+def send_bye(message):
+    bot.reply_to(message, 'В среднем железо разлагается 90-100 лет')
+    
+@bot.message_handler(commands=['rubber'])
+def send_bye(message):
+    bot.reply_to(message, 'Резиновые шины разлагаются от 120 до 140 лет')
+
+
+@bot.message_handler(commands=['aluminum'])
+def send_bye(message):
+    bot.reply_to(message, 'Алюминиевые банки разлагаются до 500 лет')
+    
+    
+bot.polling()
