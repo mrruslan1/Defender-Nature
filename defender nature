@@ -5,7 +5,7 @@ bot = telebot.TeleBot("7513556983:AAGkJ-1NTUeyQiC4S1r-mJbenJmp8QpGAp8")
     
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, "Привет! Я твой Telegram бот.Напиши любой материал и я скажу время его разложения")
+    bot.reply_to(message, "Привет! Я твой Защитник природы.Напиши любой материал и я скажу время его разложения")
     
 @bot.message_handler(commands=['plastic'])
 def send_hello(message):
@@ -19,7 +19,13 @@ def send_bye(message):
 def send_bye(message):
     bot.reply_to(message, "Сроки разложения бумаги зависят от её вида:Газетная бумага — от 1 до 4 месяцев. Картонные коробки (картон) — от 3 до 6 месяцев. Офисная бумага — примерно 2 года. Журнальная бумага — до нескольких лет")
 
-@bot.message_handler(commands=['bablegum'])
+
+@bot.message_handler(commands=['nature'])
+def send_bye(message):
+    bot.reply_to(message, 'Давай поможем природе,сейчас на планете очень много мусора.Постарайся выбрасывать мусор в специальные контейнеры чтобы потом этот мусор шел на переработку.')
+
+
+@bot.message_handler(commands=['bablegam'])
 def send_bye(message):
     bot.reply_to(message, 'Жевательная резинка (жвачка) разлагается от 15 до 30 лет')
 
